@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.15.1](https://github.com/career-ops-hq/career-ops/compare/web-v0.15.0...web-v0.15.1) (2026-10-16)
+
+
+### Bug Fixes
+
+* **doctor:** diagnose half-filled profile sections using core sectionState ([#5126](https://github.com/career-ops-hq/career-ops/issues/5126)) ([#5311](https://github.com/career-ops-hq/career-ops/issues/5311)) ([afefa44](https://github.com/career-ops-hq/career-ops/commit/afefa4408e9fb4357340c26a5b0b2180a2c6774a))
+* **web:** expose Assistant request feedback and reply access ([#5245](https://github.com/career-ops-hq/career-ops/issues/5245)) ([35788de](https://github.com/career-ops-hq/career-ops/commit/35788de02abd364710830b58bc5b4ebe5da4faf8))
+* **web:** group a flagged posting on Today the way its report labels it ([#5332](https://github.com/career-ops-hq/career-ops/issues/5332)) ([7ac3233](https://github.com/career-ops-hq/career-ops/commit/7ac3233ccb6e3c23a6d654e63975898b88ef3828)), closes [#5300](https://github.com/career-ops-hq/career-ops/issues/5300)
+* **web:** keep an extracted posting url intact ([#5149](https://github.com/career-ops-hq/career-ops/issues/5149)) ([d91bbf2](https://github.com/career-ops-hq/career-ops/commit/d91bbf296aa10f95c6f0d3d219d258f384ec3ac9))
+* **web:** match ai and pm as whole words when bucketing archetypes ([#5152](https://github.com/career-ops-hq/career-ops/issues/5152)) ([cd0a448](https://github.com/career-ops-hq/career-ops/commit/cd0a4486ef308b54f8811b67e6247277425460ef))
+* **web:** match padded pipeline ids to tracker rows numerically ([#5156](https://github.com/career-ops-hq/career-ops/issues/5156)) ([37edc27](https://github.com/career-ops-hq/career-ops/commit/37edc277ac6020b8d1a7c162a4488471000f3b76))
+* **web:** stop reading account executive as an executive level ([#5155](https://github.com/career-ops-hq/career-ops/issues/5155)) ([6fb3b35](https://github.com/career-ops-hq/career-ops/commit/6fb3b35324c0600106b05d5c63c47ca7ad5c03f5))
+* **web:** treat CAREER_OPS_PORTALS as the portals file in doctorState ([#5310](https://github.com/career-ops-hq/career-ops/issues/5310)) ([a1830c4](https://github.com/career-ops-hq/career-ops/commit/a1830c44583382581c4716b8ab970709e25fcc7e))
+
+
+### Performance Improvements
+
+* **web:** send inbox postings only to the pipeline inbox tab ([#5221](https://github.com/career-ops-hq/career-ops/issues/5221)) ([602a3d5](https://github.com/career-ops-hq/career-ops/commit/602a3d525456c174b8628663041947c9a68c34c2))
+
 ## [0.15.0](https://github.com/career-ops-hq/career-ops/compare/web-v0.14.0...web-v0.15.0) (2026-10-15)
 
 
