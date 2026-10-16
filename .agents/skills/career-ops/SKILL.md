@@ -8,7 +8,7 @@ description: >-
 arguments: mode
 user_invocable: true
 user-invocable: true
-argument-hint: "[scan | discover | deep | pdf | ats | text | latex | latex-tex | cover | email | add | expand | eu-swe | oferta | ofertas | apply | triage | batch | tracker | agent-inbox | pipeline | contacto | training | project | interview-prep | interview | master-profile | intake | interview/plan | interview/practice | interview/debrief | interview-redflag | patterns | calibrate | offer-prep | titles | upskill | followup | reply-watch | outcome | update]"
+argument-hint: "[scan | committee | discover | deep | pdf | ats | text | latex | latex-tex | cover | email | add | expand | eu-swe | oferta | ofertas | apply | triage | batch | tracker | agent-inbox | pipeline | contacto | training | project | interview-prep | interview | master-profile | intake | interview/plan | interview/practice | interview/debrief | interview-redflag | patterns | calibrate | offer-prep | titles | upskill | followup | reply-watch | outcome | update]"
 license: MIT
 ---
 
@@ -60,6 +60,8 @@ Determine the mode from `$mode`:
 | `interview/practice` | `interview/practice` |
 | `interview/debrief` | `interview/debrief` |
 | `pdf` | `pdf` |
+| `committee` | `committee` |
+| `panel` | `committee` |
 | `ats` | `ats` |
 | `text` | `text` |
 | `latex` | `latex` |

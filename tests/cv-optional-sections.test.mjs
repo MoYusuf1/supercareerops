@@ -84,6 +84,7 @@ const TEMPLATES = [
   { file: 'templates/cv-template.compact.html', format: 'html', after: '<!-- END -->', hasCertifications: true, hasCompetencies: true, hasInterests: false },
   { file: 'templates/cv-template.executive.html', format: 'html', after: '<!-- END -->', hasCertifications: true, hasCompetencies: true, hasInterests: false },
   { file: 'templates/cv-template.jake.html', format: 'html', after: '<!-- END -->', hasCertifications: true, hasCompetencies: true, hasInterests: false },
+  { file: 'templates/cv-template.classic.html', format: 'html', after: '<!-- END -->', hasCertifications: true, hasCompetencies: true, hasInterests: false, skillsLast: false },
   { file: 'templates/cv-template.leadership.html', format: 'html', after: '<!-- END -->', hasCertifications: true, hasCompetencies: true, hasInterests: false },
   { file: 'templates/cv-template.modern.html', format: 'html', after: '<!-- END -->', hasCertifications: true, hasCompetencies: true, hasInterests: false },
   { file: 'templates/cv-template.tex', format: 'tex', after: '%%%%  END  %%%%', hasCertifications: false, hasCompetencies: false, hasInterests: false },
@@ -120,7 +121,7 @@ else fail(`shipped CV templates missing from TEMPLATES — they run zero asserti
 if (phantom.length === 0) pass('every template in the matrix exists on disk');
 else fail(`TEMPLATES names templates that are not on disk: ${phantom.join(', ')}`);
 
-for (const { file, format, after, hasCertifications, hasCompetencies, hasInterests } of TEMPLATES) {
+for (const { file, format, after, hasCertifications, hasCompetencies, hasInterests, skillsLast = true } of TEMPLATES) {
   const template = readFileSync(join(ROOT, file), 'utf-8');
   const name = file.split('/').pop();
   const closingSkeleton = format === 'html' ? '</body>\n</html>' : '\\end{document}';
@@ -368,6 +369,9 @@ for (const { file, format, after, hasCertifications, hasCompetencies, hasInteres
   // become a NO-OP — bare header, intact document — never a truncated tail.
   // `after` IS the sentinel literal — reuse it rather than restating it here,
   // so the two can never drift into a weaker substring of each other.
+  // Only meaningful when Skills is the trailing section; a mid-document Skills
+  // block correctly stops at the next marker with or without the sentinel.
+  if (skillsLast) {
   const noSentinel = template.replace(after, '');
   check(`${name}: fixture actually dropped the sentinel`, noSentinel.includes(after), false);
   const strippedNoSentinel = stripEmptySections(noSentinel, { ...FULL, skills: [] }, format);
@@ -377,6 +381,7 @@ for (const { file, format, after, hasCertifications, hasCompetencies, hasInteres
     strippedNoSentinel.trimEnd().endsWith(closingSkeleton), true);
   check(`${name}: no sentinel + empty skills keeps {{EXPERIENCE}}`,
     strippedNoSentinel.includes('{{EXPERIENCE}}'), true);
+  }
 }
 
 // --- Boundary edge cases ---------------------------------------------------

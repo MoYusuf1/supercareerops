@@ -183,6 +183,7 @@ try {
       'templates/cv-template.compact.html': true,
       'templates/cv-template.executive.html': true,
       'templates/cv-template.jake.html': true,
+      'templates/cv-template.classic.html': true,
       'templates/cv-template.leadership.html': true,
       'templates/cv-template.modern.html': true,
       'templates/cv-template.zh-minimal.html': false,

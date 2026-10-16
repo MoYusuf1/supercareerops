@@ -1,5 +1,10 @@
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/wordmark-dark.svg"><img src="docs/wordmark-light.svg" alt="career-ops" width="250" height="56"></picture></p>
 
+> ## supercareerops
+> A fork of [career-ops](https://github.com/career-ops-hq/career-ops) with a built-in **Committee**: every tailored CV is reviewed by a 7-reviewer hiring panel (automated screen, hiring manager, 5 independent readers) running on cheap Haiku sub-agents, and fixes loop until the panel is favorable, nothing true is left to fix, or 3 rounds pass. It never invents experience. See [`modes/committee.md`](modes/committee.md). Also adds the `classic` one-page CV template.
+>
+> **Keep your data out of the repo.** Put your CV, profile and tracker in their own folder (e.g. `~/Documents/JobSearch`) and point the repo at it with `echo ~/Documents/JobSearch > .career-ops-data` (git-ignored). The code stays stateless and shareable; your data never gets committed.
+
 <p align="center">The open-source AI job search agent.</p>
 
 <p align="center">
