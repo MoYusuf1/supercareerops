@@ -14,9 +14,11 @@ Every Committee sub-agent runs on the cheapest small model (Claude Code: `model:
 
 ## Round
 
+**Vote vocabulary (keep these distinct):** the automated screen says **PASS** (gets through the filter) or **REJECT**; the hiring manager says **INTERVIEW** or **NO**; each reader says **HIRE**, **MAYBE** or **NO**. Readers never say "PASS", because in hiring slang it means "pass on the candidate", the opposite of the screen's PASS.
+
 1. **Automated screen** (one sub-agent): can the text be read top to bottom; are titles, employers and dates clear; which of the JD's key terms are present and missing; contact details present, length sensible, no filler. PASS or REJECT plus up to five reasons, each quoting its line.
 2. **Hiring manager** (one sub-agent): INTERVIEW or NO, what decided it in the first ten seconds, what it would ask in the interview, and the three weakest lines (quoted).
-3. **Five independent readers** (five sub-agents in one message). Each answers in under 120 words: HIRE, MAYBE or PASS, the line that hurt most (quoted), and two more problems.
+3. **Five independent readers** (five sub-agents in one message). Each answers in under 120 words: HIRE, MAYBE or NO, the line that hurt most (quoted), and two more problems.
    - The hiring manager: can this person do the job on day one?
    - A rival applicant for the same job: where is this resume weaker than mine?
    - The CEO: what did this person change, and by how much?
